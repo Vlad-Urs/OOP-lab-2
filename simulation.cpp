@@ -122,6 +122,13 @@ class Hull{
     int condition=100;
 };
 
+class Gun{
+    public:
+
+    int condition = 100;
+    int damage;
+};
+
 class LifeSuport{
     public:
 
@@ -190,15 +197,6 @@ int main(){
     Reactor MainReactor;
     Shield MainShield;
     Engine EngineOne;
-    EngineOne.id = 1;
-    EngineOne.state();
-    EngineOne.condition = 70;
-    EngineOne.state();
-    EngineOne.condition = 40;
-    EngineOne.state();
-    EngineOne.condition = 20;
-    EngineOne.state();
-    EngineOne.condition = 5;
-    EngineOne.state();
+    
     return 0;
 }
