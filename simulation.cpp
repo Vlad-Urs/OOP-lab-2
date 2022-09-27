@@ -22,6 +22,16 @@ void yellow(){
 	cout << "\033[0;33m";
 }
 
+class Pirates{
+    public:
+
+    int x;
+    int y;
+    int z;
+    int speed;
+    int shield_rating;
+};
+
 class Reactor{
     public:
 
@@ -120,13 +130,38 @@ class Hull{
     public:
 
     int condition=100;
+    int RepairTime;
+    void state(){
+       if (condition > 70){
+        green();
+        cout << "The hull is good condition";
+       }
+       else if(condition > 35){
+        yellow();
+        cout << "The hull is in need of repairs";
+       }
+       else if(condition > 9){
+        red();
+        cout << "The hull has been breached";
+       }
+       else{
+        red();
+        cout << "The hull has ruptured";
+       }
+    }
 };
 
 class Gun{
     public:
 
     int condition = 100;
+    int accuracy;
     int damage;
+
+    int shoot(Pirates pirate_ship){
+
+        return 0;
+    }
 };
 
 class LifeSuport{
@@ -189,9 +224,7 @@ class Station{
 
 };
 
-class Pirates{
-    public:
-};
+
 
 int main(){
     Reactor MainReactor;
